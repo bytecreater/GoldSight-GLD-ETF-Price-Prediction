@@ -6,7 +6,7 @@ model = joblib.load("random_forest_regressor_model.sav")
 
 st.set_page_config(page_title="GoldSight : GLD ETF Price Predictor", page_icon="🥇")
 
-st.title("🥇 Gold Price Predictor")
+st.title("🥇 GoldSight : GLD Price Predictor")
 
 col1, col2 = st.columns(2)
 
@@ -28,6 +28,6 @@ if st.button("Predict", use_container_width=True):
     prediction = model.predict(df)[0]
 
     st.metric(
-        label="Predicted Gold Price",
+        label="GoldSight : GLD ETF Price Predictor",
         value=f"${prediction:.2f}"
     )
